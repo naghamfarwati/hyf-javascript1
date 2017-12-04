@@ -1,0 +1,36 @@
+
+Hi Nagham,
+
+1. Your code for QUESTION 1 looks good.
+
+2. For QUESTION 2,you did this part correctly:
+
+    let durationHours = tasks.map(task => task.duration / 60);
+
+but I'm not sure why you added up the total minutes and hours for all the tasks before converting the task durations to hours. It wasn't necessary to use reduce for this part.
+
+3. The instructions said to filter OUT all tasks that took 2 hours or more. I think what this means is we're supposed to save only those tasks that were LESS than 2 hours long. So, for your LONGTASKS array, you would have used:
+         
+                duration => duration < 2
+
+4. For multiplying the durations by a per hour wage, I think we had to use only the durations that were less than 2 hours long -- from the new filtered array instead of from the tasks array.
+Because you used the TASKS array to calculate the salary, Maartje's pay ends up being the total for ALL the tasks she did instead of ONLY those that took less than 2 hours.
+
+
+Going by the instructions, your homework might have looked somthing like this:
+
+     tasks = monday.concat(tuesday);
+
+     let durationHours = tasks.map(task => task.duration / 60);
+
+     let shortTasks = durationHours.filter(duration => duration < 2);
+
+     let totalShortTasks = shortTasks.map(duration => duration).reduce((a, b) => a + b, 0);
+
+     const wagePerHour = 15;
+     let salary = totalShortTasks * wagePerHour;
+
+
+Also, I would recommend using spaces between lines/sections of code to make it more readable.  
+
+
