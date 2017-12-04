@@ -33,4 +33,3 @@ Going by the instructions, your homework might have looked somthing like this:
 
 Also, I would recommend using spaces between lines/sections of code to make it more readable.  
 
-
